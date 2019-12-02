@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function() { return view('welcome'); });//redirect('dashboard'); });
+
+Auth::routes();
+
+// Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::get('/{any}', 'DashboardController@index')->where('any', '.*');//->where('any', '^(?!api\/)[\/\w\.-]*');//->where('any', '.*');
