@@ -30,6 +30,28 @@
                             <input type="text" id="name" class="form-control" placeholder="Name" v-model="name">
                             <span class="help-block" v-if="has_error && errors.name">{{ errors.name }}</span>
                         </div>                    
+                        <div class="form-group" v-bind:class="{ 'has-error': has_error && errors.userclass }">
+                            <label for="userclass d-block">Class</label>
+                            <!-- <input type="text" id="userclass" class="form-control" placeholder="Class (A, B, or C)" v-model="userclass"> -->
+                            <div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="userclass" value="A" v-model="userclass">A
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="userclass" value="B" v-model="userclass">B
+                                    </label>
+                                </div>
+                                <div class="form-check-inline disabled">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="userclass" value="C" v-model="userclass">C
+                                    </label>
+                                </div> 
+                                <div class="help-block" v-if="has_error && errors.class">{{ errors.class }}</div>
+                            </div>
+                        </div>                    
                         <div class="form-group" v-bind:class="{ 'has-error': has_error && errors.email }">
                             <label for="email">E-mail</label>
                             <input type="email" id="email" class="form-control" placeholder="user@example.com" v-model="email">
@@ -67,6 +89,7 @@
     data() {
         return {
             name: '',
+            userclass: '',
             email: '',
             password: '',
             password_confirmation: '',
@@ -83,6 +106,7 @@
                 data: {
                     name: app.name,
                     email: app.email,
+                    class: app.userclass,
                     password: app.password,
                     password_confirmation: app.password_confirmation
                 },

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function() { return view('welcome'); });//redirect('dashboard'); });
+// Route::get('/', function() { return view('welcome'); });//redirect('dashboard'); });
 
 Auth::routes();
 

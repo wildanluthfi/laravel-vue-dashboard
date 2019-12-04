@@ -77,8 +77,9 @@
               password: app.password
             },
             success: function() {
-              const redirectTo = redirect ? redirect.from.name : this.$auth.user().role === 2 ? 'dashboard' : 'dashboard'
-              this.$router.push({name: redirectTo})
+              // const redirectTo = redirect ? redirect.from.name : this.$auth.user().role === 2 ? 'dashboard' : 'dashboard'
+              // this.$router.push({name: redirectTo})
+              // this.$router.push({name: 'dashboard'})
             },
             error: function() {
               app.has_error = true

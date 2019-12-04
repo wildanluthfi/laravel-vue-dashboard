@@ -9,8 +9,9 @@ const config = {
     tokenDefaultName: 'token',
     tokenStore: ['localStorage'],
     rolesvar: 'role',
+    notFoundRedirect: {path: '/'},
     registerData: {url: 'auth/register', method: 'POST', redirect: '/login'},
-    loginData: {url: 'auth/login', method: 'POST', redirect: '/dashboard', fetchUser: true},
+    loginData: {url: 'auth/login', method: 'POST', redirect: '/dashboard', fetchUser: false},
     logoutData: {url: 'auth/logout', method: 'POST', redirect: '/login', makeRequest: true},
     fetchData: {url: 'auth/user', method: 'GET', enabled: true},
     refreshData: {url: 'auth/refresh', method: 'GET', enabled: true, interval: 120}

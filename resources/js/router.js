@@ -8,11 +8,6 @@ const router = new VueRouter({
     linkExactActiveClass: 'active',
     mode: 'history',
     routes: [
-        // {
-        //     path: '/',
-        //     component: () => import('./views/Home.vue'),
-        //     meta: {auth: undefined}
-        // },
         {
             path: '/',
             redirect: 'dashboard',
@@ -48,8 +43,7 @@ const router = new VueRouter({
                 component: () => import(/* webpackChunkName: "demo" */ './views/Reading.vue'),
                 meta: {auth: true}
                 }
-            ],
-            meta: {auth: true}
+            ]
         },
         {
             path: '/',

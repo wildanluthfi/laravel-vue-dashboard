@@ -9,7 +9,7 @@
             <!-- <router-link class="navbar-brand" to="/">
                 <img :src="logo" class="navbar-brand-img" alt="...">
             </router-link> -->
-
+            
             <slot></slot>
             <div v-show="$sidebar.showSidebar" class="navbar-collapse collapse show" id="sidenav-collapse-main">
 
@@ -26,21 +26,39 @@
                     </div>
                 </div>
 
+                <!--Heading-->
+                <h6 class="navbar-heading text-muted">Lesson Material</h6>
                 <ul class="navbar-nav">
-                    <slot name="links">
-                    </slot>
+                    <slot name="links"></slot>
                 </ul>
                 <!--Divider-->
                 <hr class="my-3">
                 <!--Heading-->
-                <h6 class="navbar-heading text-muted">Your Profile</h6>
+                <h6 class="navbar-heading text-muted">Assignments</h6>
                 <!--Navigation-->
                 <ul class="navbar-nav mb-md-3">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="ni ni-palette"></i> Edit Profile
                         </a>
+                    </li> -->
+                    <li class="nav-item" v-if="$auth.check()">
+                        <a class="nav-link" href="#">
+                            <!-- <i class="ni ni-ui-04"></i> Logout -->Listening
+                        </a>
                     </li>
+                </ul>
+                <!--Divider-->
+                <hr class="my-3">
+                <!--Heading-->
+                <h6 class="navbar-heading text-muted">Profile</h6>
+                <!--Navigation-->
+                <ul class="navbar-nav mb-md-3">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="ni ni-palette"></i> Edit Profile
+                        </a>
+                    </li> -->
                     <li class="nav-item" v-if="$auth.check()">
                         <a class="nav-link" href="#" @click.prevent="$auth.logout()">
                             <i class="ni ni-ui-04"></i> Logout

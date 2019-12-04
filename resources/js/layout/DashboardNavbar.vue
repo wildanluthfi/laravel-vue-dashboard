@@ -9,11 +9,11 @@
             <li class="nav-item dropdown">
                 <base-dropdown class="nav-link pr-0">
                     <div class="media align-items-center" slot="title">
-                        <span class="avatar avatar-sm rounded-circle">
-                          <!-- <img alt="Image placeholder" src="img/theme/team-4-800x800.jpg"> -->
-                        </span>
-                        <div class="media-body ml-2 d-none d-lg-block">
-                            <span class="mb-0 text-sm  font-weight-bold" :user="user">{{user.name}}</span>
+                        <!-- <span class="avatar avatar-sm rounded-circle">
+                          <img alt="Image placeholder" src="img/theme/team-4-800x800.jpg">
+                        </span> -->
+                        <div class="media-body ml-2 d-none d-lg-block" :user="user">
+                            <span class="mb-0 text-sm font-weight-bold">{{user.name}}</span>
                         </div>
                     </div>
 
