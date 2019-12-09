@@ -37,16 +37,7 @@
                 <h6 class="navbar-heading text-muted">Assignments</h6>
                 <!--Navigation-->
                 <ul class="navbar-nav mb-md-3">
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="ni ni-palette"></i> Edit Profile
-                        </a>
-                    </li> -->
-                    <li class="nav-item" v-if="$auth.check()">
-                        <a class="nav-link" href="#">
-                            <!-- <i class="ni ni-ui-04"></i> Logout -->Listening
-                        </a>
-                    </li>
+                    <slot name="assignment-links"></slot>
                 </ul>
                 <!--Divider-->
                 <hr class="my-3">

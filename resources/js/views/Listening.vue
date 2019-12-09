@@ -19,9 +19,6 @@
                                 <div class="col-12 example" v-html="item.example">
                                     {{item.example}}
                                 </div>
-                                <!-- <base-button type="primary">
-                                    Example
-                                </base-button> -->
                             </div>
                         </div>
                     </div>
@@ -421,26 +418,102 @@
                             <li>He's <u>doing too much</u>.</li>
                             <li>He's working as a firefighter.</li>
                         </ol>`
-                    },/*
-                    {
-                        title: 'Long Conversations | Before Listening: Anticipate the Topic and the Questions',
-                        content: `It is very helpful to your overall comprehension if you know what topics to expect in the long conversations. You should therefore try to anticipate the topics you will be hearing. For example, are the conversations about some aspect of school life, or some type of social issue, or a trip someone is planning? A helpful strategy is therefore to look briefly at the answers in the test book, before you actually hear the conversations on the recording, and try to determine the topics of the conversations that you will hear.<br><br>
-
-                        It is also very helpful to your ability to answer individual questions with the long conversations if you can anticipate what the questions will be and listen specifically for the answers to those questions.`
                     },
                     {
-                        title: 'Long Conversations | While Listening: Determine the Topic, Draw Conclusions, Answer in Order',
-                        content: `As you listen to each long conversation, you should be thinking about the topic (subject) or main idea for each conversation. Since the first one or two sentences generally give the topic, you should be asking yourself what the topic is while you are listening carefully to the first part of the conversation.<br><br>
-                        As you listen to each long conversation, you should be trying to set the situation in your mind. You should be thinking the following thoughts:<br>
-                        Who is talking?<br>
-                        When does the conversation probably take place?<br>
-                        Where does the conversation probably take place?<br>
-                        Mat is the source of information for the conversation?<br><br>
+                        title: 'Long Conversations and Long Talks',
+                        content: `<strong>Before Listening: Anticipate the Topic and the Questions</strong><br><br>
+
+                        It is very helpful to your overall comprehension if you know what topics to expect in the long conversations. You should therefore try to anticipate the topics you will be hearing. For example, are the conversations about some aspect of school life, or some type of social issue, or a trip someone is planning? A helpful strategy is therefore to look briefly at the answers in the test book, before you actually hear the conversations on the recording, and try to determine the topics of the conversations that you will hear.<br><br>
+
+                        It is also very helpful to your ability to answer individual questions with the long conversations if you can anticipate what the questions will be and listen specifically for the answers to those questions.<br><br>
+
+                        <strong>While Listening: Determine the Topic, Draw Conclusions, Answer in Order</strong><br><br>
+
+                        As you listen to each long conversation, you should be thinking about the topic (subject) or main idea for each conversation. Since the first one or two sentences generally give the topic, you should be asking yourself what the topic is while you are listening carefully to the first part of the conversation.<br><br>
+                        As you listen to each long conversation, you should be trying to set the situation in your mind. You should be thinking the following thoughts:
+                        <ul>
+                            <li>Who is talking?</li>
+                            <li>When does the conversation probably take place?</li>
+                            <li>Where does the conversation probably take place?</li>
+                            <li>What is the source of information for the conversation?</li>
+                        </ul>
+                        
                         There are two possible methods to use while you listen to a long conversation:<br>
                         You can just listen to the conversation (and ignore the answers).<br>
                         You can follow along with the answers while you listen.<br><br>
-                        Some students prefer to just listen to the conversation while it is being spoken, and if that method works well for you, then that is what you should do. Other students find that they can answer more questions correctly if they read along with the answers while the conversation is being spoken. Because the detail questions are answered in order, it is possible to read along while you listen to the conversation on the recording.`
-                    },*/
+                        Some students prefer to just listen to the conversation while it is being spoken, and if that method works well for you, then that is what you should do. Other students find that they can answer more questions correctly if they read along with the answers while the conversation is being spoken. Because the detail questions are answered in order, it is possible to read along while you listen to the conversation on the recording.
+                        `,
+                        example: `
+                        On the recording, you hear:
+                        <div class="row">
+                            <div class="col-3">(narrator)</div>
+                            <div class="col-9">Questions 1 through 4. Listen to a conversation between a professor and a student.</div>
+                            <div class="col-3">(man)</div>
+                            <div class="col-9">Hello, Professor Denton. Are you free for a moment? Could I have a word with you?</div>
+                            <div class="col-3">(woman)</div>
+                            <div class="col-9">Come on in, Michael. Of course I have some time. These are my office hours, and this is the right time for you to come and ask questions. Now, how can I help you?</div>
+                            <div class="col-3">(man)</div>
+                            <div class="col-9">Well, I have a quick question for you about the homework assignment for tomorrow. I thought the assignment was to answer the first three questions at the top of page 67 in the text, but when I looked, there weren't any questions there. I'm confused.</div>
+                            <div class="col-3">(woman)</div>
+                            <div class="col-9">The assignment was to answer the first three questions at the top of page 76, not 67.</div>
+                            <div class="col-3">(man)</div>
+                            <div class="col-9">Oh, now I understand. I'm glad I came in to check. Thanks for your help.</div>
+                            <div class="col-3">(woman)</div>
+                            <div class="col-9">No problem. See you tomorrow.</div>
+                        </div>
+                        <br>
+                        Questions:
+                        <ol>
+                            <li>
+                                On the recording, you hear:<br>
+                                (narrator) <i>Who is the man?</i><br><br>
+                                In your test book, you read:
+                                <ol type="A">
+                                    <li>A professor</li>
+                                    <li>An office worker</li>
+                                    <li>Professor Denton's assistant</li>
+                                    <li>A student</li>
+                                </ol>
+                            </li>
+                            <br>
+                            <li>
+                                On the recording, you hear:<br>
+                                (narrator) <i>When does the man come to see Professor Denton?</i><br><br>
+                                In your test book, you read:
+                                <ol type="A">
+                                    <li>During regular class hours</li>
+                                    <li>Just before class time</li>
+                                    <li>As soon as class is finished</li>
+                                    <li>During office hours</li>
+                                </ol>
+                            </li>
+                            <br>
+                            <li>
+                                On the recording, you hear:<br>
+                                (narrator) <i>Why does the man come to see Professor Denton?</i><br><br>
+                                In your test book, you read:
+                                <ol type="A">
+                                    <li>To turn in an assignment</li>
+                                    <li>To ask a question</li>
+                                    <li>To pick up a completed test</li>
+                                    <li>To explain why he did not attend class</li>
+                                </ol>
+                            </li>
+                            <br>
+                            <li>
+                                On the recording, you hear:<br>
+                                (narrator) <i>What incorrect information did the man have?</i><br><br>
+                                In your test book, you read:
+                                <ol type="A">
+                                    <li>The date the assignment was due</li>
+                                    <li>The page number of the assignment</li>
+                                    <li>The length of the assignment</li>
+                                    <li>The numbers of the assignment questions</li>
+                                </ol>
+                            </li>
+                        </ol>
+                        `
+                    }
                 ]
             }
         }
@@ -449,7 +522,8 @@
 <style scoped>
     @media (max-width: 576px) {
         .example {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
+            line-height: 1.6;
         }
         .content {
             font-size: 0.9rem;

@@ -26,6 +26,12 @@ const router = new VueRouter({
                 meta: {auth: true}
                 },
                 {
+                path: '/listening/assignment',
+                name: 'listening assignment',
+                component: () => import(/* webpackChunkName: "demo" */ './views/ListeningAssignment.vue'),
+                meta: {auth: true}
+                },
+                {
                 path: '/structure',
                 name: 'structure',
                 component: () => import(/* webpackChunkName: "demo" */ './views/Structure.vue'),

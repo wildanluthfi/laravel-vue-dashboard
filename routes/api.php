@@ -18,12 +18,17 @@ use Illuminate\Http\Request;
 // });
 
 Route::prefix('auth')->group(function() {
-    Route::post('register', 'AuthController@register')->middleware('cors');
-    Route::post('login', 'AuthController@login')->middleware('cors');
-    Route::get('refresh', 'AuthController@refresh')->middleware('cors');
+    Route::post('register', 'AuthController@register');
+    Route::post('login', 'AuthController@login');
+    Route::get('refresh', 'AuthController@refresh');
 
     Route::group(['middleware' => 'auth:api'], function() {
         Route::get('user', 'AuthController@user');
         Route::post('logout', 'AuthController@logout');
     });
+});
+
+Route::prefix('assignment')->group(function() {
+    Route::post('store', 'AssignmentController@store');
+    Route::post('get-score', 'AssignmentController@getScore');
 });
