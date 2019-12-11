@@ -5,6 +5,7 @@
             <!--Toggler-->
             <navbar-toggle-button @click.native="showSidebar">
                 <span class="navbar-toggler-icon"></span>
+                <h2 style="margin: 0; display: inline;"> MENU</h2>
             </navbar-toggle-button>
             <!-- <router-link class="navbar-brand" to="/">
                 <img :src="logo" class="navbar-brand-img" alt="...">
@@ -26,6 +27,14 @@
                     </div>
                 </div>
 
+                <!-- Dashboard Link -->
+                <ul class="navbar-nav">
+                    <slot name="dashboard"></slot>
+                </ul>
+
+                <!--Divider-->
+                <hr class="my-3">
+
                 <!--Heading-->
                 <h6 class="navbar-heading text-muted">Lesson Material</h6>
                 <ul class="navbar-nav">
@@ -46,7 +55,7 @@
                 <!--Navigation-->
                 <ul class="navbar-nav mb-md-3">
                     <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/profile">
                             <i class="ni ni-palette"></i> Edit Profile
                         </a>
                     </li> -->

@@ -7,7 +7,6 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -41,8 +40,8 @@ import auth from './auth'
 Vue.router = router
 
 Vue.use(VueAxios, axios)
-axios.defaults.baseURL = `https://class.h2omelon.id/api`
-// axios.defaults.baseURL = `http://localhost:8000/api` // to prevent cors on localhost
+// axios.defaults.baseURL = `https://class.h2omelon.id/api`
+axios.defaults.baseURL = `http://localhost:8000/api` // to prevent cors on localhost
 Vue.use(VueAuth, auth)
 
 // const app = new Vue({

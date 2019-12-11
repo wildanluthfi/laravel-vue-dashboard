@@ -6,21 +6,10 @@
                 <div class="col">
                     <div class="card shadow">
                         <div class="card-header bg-transparent">
-                            <h3 class="mb-0">Listening Assignment</h3>
+                            <h3 class="mb-0">Structure Assignment</h3>
                         </div>
                         <div class="card-body" style="">
                             <div class="row" v-for="(question, index) in questions" v-bind:key="index">
-                                <!-- Audio -->
-                                <div class="col-12 text-center mb-2" v-if="index === 0">
-                                    <audio controls src="https://class.h2omelon.id/audio/parta.mp3">Your browser doesn't support audio</audio>
-                                </div>
-                                <div class="col-12 text-center mb-2" v-if="index === 30">
-                                    <audio controls src="https://class.h2omelon.id/audio/partb.mp3">Your browser doesn't support audio</audio>
-                                </div>
-                                <div class="col-12 text-center mb-2" v-if="index === 38">
-                                    <audio controls src="https://class.h2omelon.id/audio/partc.mp3">Your browser doesn't support audio</audio>
-                                </div>
-
                                 <!-- Questions -->
                                 <div class="col-12 question mb-3">
                                     Question {{index + 1}}
@@ -593,7 +582,6 @@
             submitAssignment() {
                 this.userAnswers = []
                 this.correctAnswers = []
-                this.userScore = 0
                 this.questions.forEach((question, index) => {
                     let userAnswer = (document.querySelector(`input[name=question${index}]:checked`) || '').value
                     userAnswer ? this.userAnswers.push(userAnswer) : this.userAnswers.push('x')
@@ -607,7 +595,7 @@
                     method: 'POST',
                     data: {
                         user_id: this.user.id,
-                        type: 'listening',
+                        type: 'structure',
                         user_answer: this.userAnswers.toString(),
                         score: this.userScore
                     }

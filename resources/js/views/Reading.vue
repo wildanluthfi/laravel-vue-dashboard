@@ -8,10 +8,16 @@
                         <div class="card-header bg-transparent">
                             <h3 class="mb-0">{{item.title}}</h3>
                         </div>
-                        <div class="card-body">
-                            <div class="row icon-examples">
-                                <div class="col" v-html="item.content" style="line-height: 2;">
+                        <div class="card-body" style="line-height: 2;">
+                            <div class="row">
+                                <div class="col-12 content" v-html="item.content">
                                     {{item.content}}
+                                </div>
+                                <div v-if="item.example" class="col-12 mb-2 pb-0 mt-2 text-center card-header">
+                                    <h3>Example</h3>
+                                </div>
+                                <div v-if="item.example" class="col-12 example" v-html="item.example">
+                                    {{item.example}}
                                 </div>
                             </div>
                         </div>
@@ -58,7 +64,20 @@
                         Implied detail questions will let you know that the answer to the question is not directly stated. Some information of the correct answer will be given in the passage and you will need to draw a conclusion from that information. You'll need to identify the key word and look for an answer that could be true according to the sentence containing the key word.<br><br>
 
                         Transition questions ask you to understand that good writing contains transitions from one paragraph to the next. A paragraph may start out with the idea of the previous paragraph as a way of linking the ideas in the two paragraphs. It may also end with an idea that will be further developed in the following paragraph.`
-                    }
+                    },
+                    {
+                        title: 'Vocabulary Questions',
+                        content: `When answering vocabulary questions, it is helpful if you know the meaning of the word that being tested. However, it is not always necessary for you to know the meaning of the word. You can find definitions from structural clues, determine meanings from word parts, and use context clues to determine meanings.`
+                    },
+                    {
+                        title: 'Overall Review Questions',
+                        content: `The most common type of overall review questions are questions that ask where in the passage something is found, questions about the tone of the passage, questions about the author's purpose in writing the passage, questions about which course the passage might be a part of, or questions about where a particular piece of information might be inserted into the passage.<br><br>
+
+                        The "where in the passage" require you to look for the word asked or something with similar meaning and then answer the question asked.<br><br>
+
+                        A question about the tone of the passage might have indication of emotion on the part of the author. You must be able to recognize the emotion of the author to answer a question about tone correctly. The question about purpose is asking what the author trying to do in the passage. You can draw a conclusion about the author's purpose by referring to the main idea and the organization of the details in the passage.<br><br>`
+                    },
+
                 ]
             }
         }

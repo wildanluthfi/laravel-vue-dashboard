@@ -11,20 +11,6 @@
                         <p v-else>other error</p>
                     </div>
                     <form autocomplete="off" @submit.prevent="register" v-if="!success" method="post"> <!-- role="form" -->
-                        <!-- <base-input class="input-group-alternative mb-3" placeholder="Name" addon-left-icon="ni ni-hat-3" v-model="model.name"></base-input>
-
-                        <base-input class="input-group-alternative mb-3"
-                                    placeholder="Email"
-                                    addon-left-icon="ni ni-email-83"
-                                    v-model="model.email">
-                        </base-input>
-
-                        <base-input class="input-group-alternative"
-                                    placeholder="Password"
-                                    type="password"
-                                    addon-left-icon="ni ni-lock-circle-open"
-                                    v-model="model.password">
-                        </base-input> -->
                         <div class="form-group" v-bind:class="{ 'has-error': has_error && errors.name }">
                             <label for="name">Name</label>
                             <input type="text" id="name" class="form-control" placeholder="Name" v-model="name">

@@ -7,7 +7,7 @@
                             <small>Sign in</small>
                         </div>
                         <div class="alert alert-danger" v-if="has_error">
-                            <p>Please try again</p>
+                            <p>{{this.error}}</p>
                         </div>
                         <form autocomplete="off" @submit.prevent="login" method="POST">
                             <!-- <base-input class="input-group-alternative mb-3"
@@ -61,7 +61,8 @@
           return {
               email: '',
               password: '',
-              has_error: false
+              has_error: false,
+              error: ''
           }
       },
       mounted() {
@@ -69,23 +70,28 @@
       },
       methods: {
         login() {
-          var redirect = this.$auth.redirect()
+          // var redirect = this.$auth.redirect()
           var app = this
           this.$auth.login({
             params: {
               email: app.email,
               password: app.password
             },
-            success: function() {
+            success: function(res) {
               // const redirectTo = redirect ? redirect.from.name : this.$auth.user().role === 2 ? 'dashboard' : 'dashboard'
               // this.$router.push({name: redirectTo})
               // this.$router.push({name: 'dashboard'})
             },
-            error: function() {
+            error: function(error) {
               app.has_error = true
+              if ( error.response.status === 500) {
+                app.error = 'Can\'t connect to database, please wait a moment and try again'
+              } else if ( error.response.status === 401) {
+                app.error = 'Please check your email or password again'
+              }
             },
             rememberMe: true,
-            fetchUser: true
+            fetchUser: false
           })
         }
       }

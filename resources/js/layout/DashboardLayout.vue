@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
     <side-bar :background-color="sidebarBackground" short-title="" title="">
+      <template slot="dashboard">
+        <sidebar-item :link="{name: 'Dashboard', icon: 'ni ni-tv-2 text-primary', path: '/dashboard'}"/>
+      </template>
       <template slot="links">
         <sidebar-item :link="{name: 'Listening', icon: 'ni ni-tv-2 text-primary', path: '/listening'}"/>
         <sidebar-item :link="{name: 'Structure', icon: 'ni ni-planet text-blue', path: '/structure'}"/>
