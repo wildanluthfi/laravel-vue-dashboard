@@ -12,8 +12,8 @@
       </template>
       <template slot="assignment-links">
         <sidebar-item :link="{name: 'Listening', icon: 'ni ni-tv-2 text-primary', path: '/listening/assignment'}"/>
-        <!-- <sidebar-item :link="{name: 'Structure', icon: 'ni ni-planet text-blue', path: '/structure'}"/>
-        <sidebar-item :link="{name: 'Written Expression', icon: 'ni ni-pin-3 text-orange', path: '/written-expression'}"/>
+        <sidebar-item :link="{name: 'Structure', icon: 'ni ni-planet text-blue', path: '/structure/assignment'}"/>
+        <!-- <sidebar-item :link="{name: 'Written Expression', icon: 'ni ni-pin-3 text-orange', path: '/written-expression'}"/>
         <sidebar-item :link="{name: 'Reading', icon: 'ni ni-single-02 text-yellow', path: '/reading'}"/> -->
       </template>
     </side-bar>

@@ -38,6 +38,12 @@ const router = new VueRouter({
                 meta: {auth: true}
                 },
                 {
+                path: '/structure/assignment',
+                name: 'structure assignment',
+                component: () => import(/* webpackChunkName: "demo" */ './views/StructureAssignment.vue'),
+                meta: {auth: true}
+                },
+                {
                 path: '/written-expression',
                 name: 'written expression',
                 component: () => import(/* webpackChunkName: "demo" */ './views/WrittenExpression.vue'),

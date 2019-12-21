@@ -87,7 +87,7 @@
               if ( error.response.status === 500) {
                 app.error = 'Can\'t connect to database, please wait a moment and try again'
               } else if ( error.response.status === 401) {
-                app.error = 'Please check your email or password again'
+                app.error = 'Invalid Credential (email or password)'
               }
             },
             rememberMe: true,
