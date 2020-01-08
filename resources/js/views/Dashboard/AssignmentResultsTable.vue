@@ -26,7 +26,10 @@
             {{row.type}}
           </th>
           <td>
-            {{row.score}} {{row.type == 'listening' ? '/ 50' : ''}} {{row.type == 'structure' ? '/ 40' : ''}}
+            {{row.score}}
+            {{row.type == 'listening' ? '/ 50' : ''}}
+            {{row.type == 'structure' ? '/ 40' : ''}}
+            {{row.type == 'written expressions' ? '/ 20' : ''}}
           </td>
           <td>
             {{row.user_answer}}

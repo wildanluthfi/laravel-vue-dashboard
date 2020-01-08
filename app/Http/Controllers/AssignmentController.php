@@ -24,7 +24,7 @@ class AssignmentController extends Controller
     public function getScore(Request $request)
     {
         $user = JWTAuth::user();
-        $result = Assignment::select('type','user_answer', 'score')->where('user_id', $user->id)->get();
+        $result = Assignment::select('type','user_answer', 'score')->where('user_id', $user->id)->orderBy('id', 'desc')->get();
 
         return $result;
     }

@@ -50,6 +50,12 @@ const router = new VueRouter({
                 meta: {auth: true}
                 },
                 {
+                path: '/written-expression/assignment',
+                name: 'written expression assignment',
+                component: () => import(/* webpackChunkName: "demo" */ './views/WrittenExpressionAssignment.vue'),
+                meta: {auth: true}
+                },
+                {
                 path: '/reading',
                 name: 'reading',
                 component: () => import(/* webpackChunkName: "demo" */ './views/Reading.vue'),

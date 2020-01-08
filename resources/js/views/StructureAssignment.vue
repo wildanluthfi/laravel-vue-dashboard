@@ -485,6 +485,7 @@
             submitAssignment() {
                 this.userAnswers = []
                 this.correctAnswers = []
+                this.userScore = 0
                 this.questions.forEach((question, index) => {
                     let userAnswer = (document.querySelector(`input[name=question${index}]:checked`) || '').value
                     userAnswer ? this.userAnswers.push(userAnswer) : this.userAnswers.push('x')

@@ -68,3 +68,28 @@
 @import "custom/vendors";
 
 
+span.a, span.b, span.c, span.d {
+    text-decoration: underline;
+    position: relative;
+    line-height: 3em;
+}
+span.a::before, span.b::before, span.c::before, span.d::before {
+    position: absolute;
+    text-decoration: none !important;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
+}
+span.a::before {
+    content: 'A';
+}
+span.b::before {
+    content: 'B';
+}
+span.c::before {
+    content: 'C';
+}
+span.d::before {
+    content: 'D';
+}
