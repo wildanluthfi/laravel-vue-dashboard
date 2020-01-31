@@ -32,3 +32,7 @@ Route::prefix('assignment')->group(function() {
     Route::post('store', 'AssignmentController@store');
     Route::post('get-score', 'AssignmentController@getScore');
 });
+Route::prefix('exam')->group(function() {
+    Route::post('store', 'ExamController@store');
+    Route::post('get-score', 'ExamController@getScore');
+});

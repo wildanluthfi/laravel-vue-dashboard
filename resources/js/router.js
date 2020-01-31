@@ -56,11 +56,23 @@ const router = new VueRouter({
                 meta: {auth: true}
                 },
                 {
-                path: '/reading',
-                name: 'reading',
-                component: () => import(/* webpackChunkName: "demo" */ './views/Reading.vue'),
+                    path: '/reading',
+                    name: 'reading',
+                    component: () => import(/* webpackChunkName: "demo" */ './views/Reading.vue'),
+                    meta: {auth: true}
+                },
+                {
+                path: '/reading/assignment',
+                name: 'reading assignment',
+                component: () => import(/* webpackChunkName: "demo" */ './views/ReadingAssignment.vue'),
                 meta: {auth: true}
-                }
+                },
+                {
+                path: '/exam',
+                name: 'exam',
+                component: () => import(/* webpackChunkName: "demo" */ './views/Exam.vue'),
+                meta: {auth: true}
+                },
             ]
         },
         {

@@ -53,7 +53,7 @@
         },
         data: () => {
             return {
-                progress: 65
+                progress: 80
             }
         }
     };

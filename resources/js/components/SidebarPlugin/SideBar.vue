@@ -36,6 +36,14 @@
                 <hr class="my-3">
 
                 <!--Heading-->
+                <h6 class="navbar-heading text-muted">Exam</h6>
+                <ul class="navbar-nav">
+                    <slot name="exam-links"></slot>
+                </ul>
+                <!--Divider-->
+                <hr class="my-3">
+                <!--Heading-->
+                <!--Heading-->
                 <h6 class="navbar-heading text-muted">Lesson Material</h6>
                 <ul class="navbar-nav">
                     <slot name="links"></slot>
